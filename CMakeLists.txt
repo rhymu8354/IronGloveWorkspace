@@ -69,6 +69,12 @@ if(ParentDirectory STREQUAL "")
     # Suppress Microsoft warnings about functions being unsafe.
     add_definitions(-D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS)
 
+    # Lua
+    add_subdirectory(lua)
+    foreach(Child LuaCompiler LuaInterpreter LuaLibrary)
+        set_target_properties(${Child} PROPERTIES FOLDER Libraries/lua)
+    endforeach()
+
     # Google Test
     set(BUILD_GTEST ON CACHE BOOL "Builds the googletest subproject" FORCE)
     set(BUILD_GMOCK OFF CACHE BOOL "Builds the googlemock subproject" FORCE)

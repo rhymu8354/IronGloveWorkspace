@@ -68,6 +68,11 @@
             branch="master"
             />
         <repository
+            path="lua"
+            url="git@github.com:rhymu8354/lua.git"
+            branch="master"
+            />
+        <repository
             path="zlib"
             url="git@github.com:rhymu8354/zlib.git"
             branch="cmake-friendly"
