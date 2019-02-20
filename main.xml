@@ -24,7 +24,7 @@
         <repository
             path="IronGloveBackend"
             url="git@github.com:rhymu8354/IronGloveBackend.git"
-            branch="master"
+            branch="luajit"
             />
         <repository
             path="Json"
@@ -70,6 +70,11 @@
         <repository
             path="lua"
             url="git@github.com:rhymu8354/lua.git"
+            branch="master"
+            />
+        <repository
+            path="luajit-2.0"
+            url="http://luajit.org/git/luajit-2.0.git"
             branch="master"
             />
         <repository

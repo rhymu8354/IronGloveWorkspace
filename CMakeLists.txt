@@ -75,6 +75,12 @@ if(ParentDirectory STREQUAL "")
         set_target_properties(${Child} PROPERTIES FOLDER Libraries/lua)
     endforeach()
 
+    # LuaJIT
+    add_library(LuaJIT SHARED IMPORTED)
+    set_property(TARGET LuaJIT PROPERTY IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/luajit-2.0/src/lua51.dll)
+    set_property(TARGET LuaJIT PROPERTY IMPORTED_IMPLIB ${CMAKE_CURRENT_SOURCE_DIR}/luajit-2.0/src/lua51.lib)
+    set_property(TARGET LuaJIT PROPERTY INTERFACE_INCLUDE_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/luajit-2.0/src)
+
     # Google Test
     set(BUILD_GTEST ON CACHE BOOL "Builds the googletest subproject" FORCE)
     set(BUILD_GMOCK OFF CACHE BOOL "Builds the googlemock subproject" FORCE)
